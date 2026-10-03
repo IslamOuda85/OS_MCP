@@ -1,0 +1,227 @@
+{
+  "chapter": 18,
+  "spec_version": "1.0",
+  "generated_at": "2026-09-30T00:00:00Z",
+  "assets": [
+    {
+      "id": "ch18_ill_001",
+      "file": "ch18_slide05_img001.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 5 Image",
+      "section_id": "ch18-18-1",
+      "alt": "Illustration from slide 5",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 5
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "c6aaf601d7486c73088d2a035f0947384e0501ef0538ce6f69d9707fa023069b",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_002",
+      "file": "ch18_slide15_img002.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 15 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 15",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 15
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "4fb4b9f6d928aea3ee4fd7ae7ae1e50667815f78db4d7dab1004b0f77862518d",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_003",
+      "file": "ch18_slide19_img003.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 19 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 19",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 19
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "36f02ef93e7742a36823a1526dd9f8c0a796f550e8a16e346740d93e3ca459e7",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_004",
+      "file": "ch18_slide22_img004.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 22 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 22",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 22
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "15b0dbda8bea22fde230fafc132909e6c007ba85be5c45aa51a1ae3d182e65ef",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_005",
+      "file": "ch18_slide25_img005.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 25 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 25",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 25
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "f3b0ae1710d17dbfa79d1a6f375a90b127728843d34520ac2efd7162141d7946",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_006",
+      "file": "ch18_slide31_img006.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 31 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 31",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 31
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "3cb17814c54a220feca998513bb481c906a9756a60f9965054a1f4d6268ed699",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_007",
+      "file": "ch18_slide36_img007.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 36 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 36",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 36
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "19b2ae720023a56f36c4e679c8ffd281ac212350d0fab3f1b5e229d2b05b7295",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_008",
+      "file": "ch18_slide44_img008.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 44 Image",
+      "section_id": "ch18-18-4",
+      "alt": "Illustration from slide 44",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 44
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "ce4723ed6103df291c3b8510463490b4095c644f6c85e0a750a8411c094ae6a7",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_009",
+      "file": "ch18_slide46_img009.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 46 Image",
+      "section_id": "ch18-18-7",
+      "alt": "Illustration from slide 46",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 46
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "b4a604cd581d9e33444893bdb9e0e0accfca90cea9c50fc116c90f22b367e531",
+      "data_file": null
+    },
+    {
+      "id": "ch18_ill_010",
+      "file": "ch18_slide48_img010.png",
+      "type": "illustration",
+      "kind": "other",
+      "render": true,
+      "orig_label": "Slide 48 Image",
+      "section_id": "ch18-18-7",
+      "alt": "Illustration from slide 48",
+      "sources": [
+        {
+          "role": "slides",
+          "file": "ch18.pptx",
+          "slide": 48
+        }
+      ],
+      "tier": "T5",
+      "confidence": "low",
+      "needs_review": true,
+      "sha256": "56a2b40b6256531ddcdd451066a85d50bbc3ff6aa6f46efec155c12ad4cafd27",
+      "data_file": null
+    }
+  ]
+}

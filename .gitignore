@@ -1,0 +1,11 @@
+# Temporary extraction inputs, generated intermediates, and duplicate staging assets
+/_staging/
+
+# Local MCP development and credentials
+/mcp-server/node_modules/
+/mcp-server/.wrangler/
+/mcp-server/.dev.vars
+/mcp-server/dist/
+.env
+.env.*
+!.env.example
