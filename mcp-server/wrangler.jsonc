@@ -5,8 +5,8 @@
   "compatibility_date": "2026-10-01",
   "workers_dev": true,
   "vars": {
-    "GITHUB_OWNER": "CHANGE_ME",
-    "GITHUB_REPO": "CHANGE_ME",
+    "GITHUB_OWNER": "IslamOuda85",
+    "GITHUB_REPO": "OS_MCP",
     "GITHUB_BRANCH": "main",
     "GITHUB_CONTENT_ROOT": ""
   }
