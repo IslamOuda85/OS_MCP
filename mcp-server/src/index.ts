@@ -38,6 +38,22 @@ function sectionPreview(env: Env, index: CourseIndex, section: SectionRow, score
     preview: section.preview, repository_url: sectionUrl(env, index, section),
   };
 }
+function focusedStart(text: string, query: string, maxChars: number): number {
+  const lower = text.toLowerCase();
+  let position = lower.indexOf(query.toLowerCase().trim());
+  if (position < 0) {
+    const words = tokens(query);
+    if (words.length > 1) {
+      const nearPhrase = new RegExp(words.join("[^a-z0-9]{1,40}"), "i").exec(text);
+      if (nearPhrase) position = nearPhrase.index;
+    }
+    if (position < 0) {
+      const positions = words.map((word) => lower.indexOf(word)).filter((at) => at >= 0);
+      if (positions.length) position = Math.min(...positions);
+    }
+  }
+  return position < 0 ? 0 : Math.max(0, position - Math.min(250, Math.floor(maxChars / 4)));
+}
 async function manifestFor(env: Env, index: CourseIndex, chapterNumber: number): Promise<AssetEntry[]> {
   const chapter = chapterOf(index, chapterNumber);
   const manifest = JSON.parse(await fetchText(env, `${chapter.folder}/assets/manifest.json`)) as { assets?: AssetEntry[] };
@@ -131,15 +147,7 @@ function buildServer(env: Env) {
     const section = index.sections.find((row) => row.id === section_id);
     if (!section) throw new Error(`Unknown section ID: ${section_id}`);
     const fullText = await getSectionText(env, index, section);
-    let selectedStart = start_char;
-    if (query && start_char === 0) {
-      const words = tokens(query);
-      const paragraphs = [...fullText.matchAll(/(?:^|\n\s*\n)([^]*?)(?=\n\s*\n|$)/g)];
-      const ranked = paragraphs.map((part) => ({
-        start: part.index, score: words.reduce((sum, word) => sum + (part[1].toLowerCase().includes(word) ? 1 : 0), 0),
-      })).sort((a, b) => b.score - a.score || a.start - b.start);
-      if (ranked[0]?.score) selectedStart = Math.max(0, ranked[0].start - 400);
-    }
+    const selectedStart = query && start_char === 0 ? focusedStart(fullText, query, max_chars) : start_char;
     const chunk = fullText.slice(selectedStart, selectedStart + max_chars);
     return jsonResult({ ...sectionPreview(env, index, section, 0), text: chunk, query: query || null, start_char: selectedStart, next_start_char: selectedStart + max_chars < fullText.length ? selectedStart + max_chars : null, total_chars: fullText.length });
   }));
@@ -152,13 +160,7 @@ function buildServer(env: Env) {
     const section = index.sections.find((row) => row.id === section_id);
     if (!section) throw new Error(`Unknown section ID: ${section_id}`);
     const fullText = await getSectionText(env, index, section);
-    let start = 0;
-    if (query) {
-      const words = tokens(query);
-      const lower = fullText.toLowerCase();
-      const positions = words.map((word) => lower.indexOf(word)).filter((position) => position >= 0);
-      if (positions.length) start = Math.max(0, Math.min(...positions) - 400);
-    }
+    const start = query ? focusedStart(fullText, query, max_chars) : 0;
     const manifest = section.asset_ids.length ? await manifestFor(env, index, section.chapter) : [];
     const assets = section.asset_ids.map((id) => manifest.find((asset) => asset.id === id)).filter((asset): asset is AssetEntry => Boolean(asset));
     return jsonResult({
